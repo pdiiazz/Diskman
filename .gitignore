@@ -2,6 +2,7 @@
 .kotlin
 .gradle
 **/build/
+!composeApp/build/dokka/
 xcuserdata
 !src/**/build/
 local.properties
