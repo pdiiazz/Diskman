@@ -1,8 +1,8 @@
 *.iml
 .kotlin
 .gradle
-**/build/
-!composeApp/build/dokka/
+**/build/*
+!**/build/dokka/
 xcuserdata
 !src/**/build/
 local.properties

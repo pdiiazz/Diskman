@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Screen</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            composeApp
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":composeApp:dokkaHtml/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="composeApp::com.diskman.ui/Screen///PointingToDeclaration//-813795679">
+  <div class="breadcrumbs"><a href="../../../index.html">composeApp</a><span class="delimiter">/</span><a href="../index.html">com.diskman.ui</a><span class="delimiter">/</span><span class="current">Screen</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Screen</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">Screen</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Screen</a><span class="token operator">&gt; </span></div><p class="paragraph">ENUM class with every screen of the application</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="1782087896%2FClasslikes%2F-813795679" anchor-label="LOGIN" id="1782087896%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-g-i-n/index.html">LOGIN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1782087896%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-l-o-g-i-n/index.html">LOGIN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="418054492%2FClasslikes%2F-813795679" anchor-label="REGISTER" id="418054492%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-g-i-s-t-e-r/index.html">REGISTER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="418054492%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-r-e-g-i-s-t-e-r/index.html">REGISTER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1003257624%2FClasslikes%2F-813795679" anchor-label="ADMIN_MENU" id="-1003257624%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-d-m-i-n_-m-e-n-u/index.html">ADMIN_MENU</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1003257624%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-a-d-m-i-n_-m-e-n-u/index.html">ADMIN_MENU</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1347864016%2FClasslikes%2F-813795679" anchor-label="STANDARD_MENU" id="-1347864016%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-a-n-d-a-r-d_-m-e-n-u/index.html">STANDARD_MENU</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1347864016%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-s-t-a-n-d-a-r-d_-m-e-n-u/index.html">STANDARD_MENU</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1400881012%2FClasslikes%2F-813795679" anchor-label="CREATE_V" id="-1400881012%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-e-a-t-e_-v/index.html">CREATE_V</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1400881012%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-c-r-e-a-t-e_-v/index.html">CREATE_V</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-51896695%2FClasslikes%2F-813795679" anchor-label="FIND_V" id="-51896695%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-n-d_-v/index.html">FIND_V</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-51896695%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-f-i-n-d_-v/index.html">FIND_V</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1791440187%2FClasslikes%2F-813795679" anchor-label="DELETE_V" id="1791440187%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-l-e-t-e_-v/index.html">DELETE_V</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1791440187%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-d-e-l-e-t-e_-v/index.html">DELETE_V</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-571498812%2FClasslikes%2F-813795679" anchor-label="SHOW_CV" id="-571498812%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-c-v/index.html">SHOW_CV</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-571498812%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-s-h-o-w_-c-v/index.html">SHOW_CV</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-128597043%2FClasslikes%2F-813795679" anchor-label="SHOW_V" id="-128597043%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-v/index.html">SHOW_V</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-128597043%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-s-h-o-w_-v/index.html">SHOW_V</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="963855435%2FClasslikes%2F-813795679" anchor-label="CREATE_U" id="963855435%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-e-a-t-e_-u/index.html">CREATE_U</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="963855435%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-c-r-e-a-t-e_-u/index.html">CREATE_U</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-138790662%2FClasslikes%2F-813795679" anchor-label="DELETE_U" id="-138790662%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-l-e-t-e_-u/index.html">DELETE_U</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-138790662%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-d-e-l-e-t-e_-u/index.html">DELETE_U</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1982127544%2FClasslikes%2F-813795679" anchor-label="FIND_U" id="-1982127544%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-n-d_-u/index.html">FIND_U</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1982127544%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-f-i-n-d_-u/index.html">FIND_U</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2058827892%2FClasslikes%2F-813795679" anchor-label="SHOW_U" id="-2058827892%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-u/index.html">SHOW_U</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058827892%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-s-h-o-w_-u/index.html">SHOW_U</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-97364218%2FClasslikes%2F-813795679" anchor-label="CREATE_P" id="-97364218%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-e-a-t-e_-p/index.html">CREATE_P</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-97364218%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-c-r-e-a-t-e_-p/index.html">CREATE_P</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1200010315%2FClasslikes%2F-813795679" anchor-label="DELETE_P" id="-1200010315%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-l-e-t-e_-p/index.html">DELETE_P</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1200010315%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-d-e-l-e-t-e_-p/index.html">DELETE_P</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1174919751%2FClasslikes%2F-813795679" anchor-label="SHOW_P" id="1174919751%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-p/index.html">SHOW_P</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1174919751%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-s-h-o-w_-p/index.html">SHOW_P</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1251620099%2FClasslikes%2F-813795679" anchor-label="FIND_P" id="1251620099%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-n-d_-p/index.html">FIND_P</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1251620099%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-f-i-n-d_-p/index.html">FIND_P</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1398361033%2FClasslikes%2F-813795679" anchor-label="CREATE_S" id="1398361033%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-e-a-t-e_-s/index.html">CREATE_S</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1398361033%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-c-r-e-a-t-e_-s/index.html">CREATE_S</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="295714936%2FClasslikes%2F-813795679" anchor-label="DELETE_S" id="295714936%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-l-e-t-e_-s/index.html">DELETE_S</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="295714936%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-d-e-l-e-t-e_-s/index.html">DELETE_S</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1547621946%2FClasslikes%2F-813795679" anchor-label="FIND_S" id="-1547621946%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-n-d_-s/index.html">FIND_S</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1547621946%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-f-i-n-d_-s/index.html">FIND_S</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1624322294%2FClasslikes%2F-813795679" anchor-label="SHOW_S" id="-1624322294%2FClasslikes%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-s/index.html">SHOW_S</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1624322294%2FClasslikes%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><a href="-s-h-o-w_-s/index.html">SHOW_S</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-372974862%2FProperties%2F-813795679" anchor-label="name" id="-372974862%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-s/index.html#-372974862%2FProperties%2F-813795679"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-s-h-o-w_-s/index.html#-372974862%2FProperties%2F-813795679">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F-813795679" anchor-label="ordinal" id="-739389684%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-o-w_-s/index.html#-739389684%2FProperties%2F-813795679"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-s-h-o-w_-s/index.html#-739389684%2FProperties%2F-813795679">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="101485865%2FFunctions%2F-813795679" anchor-label="valueOf" id="101485865%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="101485865%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Screen</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-740252171%2FFunctions%2F-813795679" anchor-label="values" id="-740252171%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-740252171%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Screen</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

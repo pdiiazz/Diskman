@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Inventory</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            composeApp
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":composeApp:dokkaHtml/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="composeApp::com.diskman.core/Inventory///PointingToDeclaration//-813795679">
+  <div class="breadcrumbs"><a href="../../../index.html">composeApp</a><span class="delimiter">/</span><a href="../index.html">com.diskman.core</a><span class="delimiter">/</span><span class="current">Inventory</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Inventory</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Inventory</a></div><p class="paragraph">Inventory Class, is the core of the application with logical operations.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-2071463706%2FConstructors%2F-813795679" anchor-label="Inventory" id="-2071463706%2FConstructors%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory.html"><span><span>Inventory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2071463706%2FConstructors%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2096613865%2FProperties%2F-813795679" anchor-label="catalog" id="2096613865%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="catalog.html"><span><span>catalog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2096613865%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="catalog.html">catalog</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.diskman.models/-vinyl-record/index.html">VinylRecord</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Catalog list. It contains the different Vinyl Records objects. Private setter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1845280188%2FProperties%2F-813795679" anchor-label="idPurchase" id="1845280188%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id-purchase.html"><span>id</span><wbr></wbr><span><span>Purchase</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1845280188%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="id-purchase.html">idPurchase</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">It stores ID for Purchases. Private setter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2122714422%2FProperties%2F-813795679" anchor-label="idSale" id="2122714422%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id-sale.html"><span>id</span><wbr></wbr><span><span>Sale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2122714422%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="id-sale.html">idSale</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">It stores ID for Sales. Private setter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1262042288%2FProperties%2F-813795679" anchor-label="purchases" id="-1262042288%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="purchases.html"><span><span>purchases</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1262042288%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="purchases.html">purchases</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.diskman.models/-purchase/index.html">Purchase</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Purchases list. It contains the different Purchase objects. Private setter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-775320170%2FProperties%2F-813795679" anchor-label="sales" id="-775320170%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sales.html"><span><span>sales</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775320170%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="sales.html">sales</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.diskman.models/-sale/index.html">Sale</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sales list. It contains the different Sale objects. Private setter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-897586833%2FProperties%2F-813795679" anchor-label="userlist" id="-897586833%2FProperties%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="userlist.html"><span><span>userlist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-897586833%2FProperties%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="userlist.html">userlist</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.diskman.models/-user/index.html">User</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">User list. It contains the different User objects. Private setter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="110727899%2FFunctions%2F-813795679" anchor-label="addUser" id="110727899%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-user.html"><span>add</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="110727899%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-user.html"><span class="token function">addUser</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">user<span class="token operator">: </span><a href="../../com.diskman.models/-user/index.html">User</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Add a User to the system.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-566220639%2FFunctions%2F-813795679" anchor-label="addVinylRecord" id="-566220639%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-vinyl-record.html"><span>add</span><wbr></wbr><span>Vinyl</span><wbr></wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-566220639%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-vinyl-record.html"><span class="token function">addVinylRecord</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">vinyl<span class="token operator">: </span><a href="../../com.diskman.models/-vinyl-record/index.html">VinylRecord</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a Vinyl Record into catalog.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1549082637%2FFunctions%2F-813795679" anchor-label="buyVinylRecords" id="-1549082637%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="buy-vinyl-records.html"><span>buy</span><wbr></wbr><span>Vinyl</span><wbr></wbr><span><span>Records</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1549082637%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="buy-vinyl-records.html"><span class="token function">buyVinylRecords</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">purchase<span class="token operator">: </span><a href="../../com.diskman.models/-purchase/index.html">Purchase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Buy Vinyl Records if the record doesn't exist in the Catalog.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2011538567%2FFunctions%2F-813795679" anchor-label="createPurchase" id="-2011538567%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-purchase.html"><span>create</span><wbr></wbr><span><span>Purchase</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2011538567%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-purchase.html"><span class="token function">createPurchase</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">date<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-purchase/index.html">Purchase</a></div><div class="brief "><p class="paragraph">Create Purchase Object.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1680940941%2FFunctions%2F-813795679" anchor-label="createSale" id="-1680940941%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-sale.html"><span>create</span><wbr></wbr><span><span>Sale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1680940941%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-sale.html"><span class="token function">createSale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">date<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/LocalDate///PointingToDeclaration/">LocalDate</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-sale/index.html">Sale</a></div><div class="brief "><p class="paragraph">Create Sale Object.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2028341076%2FFunctions%2F-813795679" anchor-label="createUser" id="-2028341076%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-user.html"><span>create</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2028341076%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-user.html"><span class="token function">createUser</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">password<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">role<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-user/index.html">User</a></div><div class="brief "><p class="paragraph">Create User Object.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1991295966%2FFunctions%2F-813795679" anchor-label="createVinyl" id="-1991295966%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-vinyl.html"><span>create</span><wbr></wbr><span><span>Vinyl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1991295966%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-vinyl.html"><span class="token function">createVinyl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">band<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">year<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">edition<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">stamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">genre<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">style<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">category<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">coverState<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">diskState<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">isReplace<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">isCollectable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-vinyl-record/index.html">VinylRecord</a></div><div class="brief "><p class="paragraph">Create Vinyl Record Object</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1753908303%2FFunctions%2F-813795679" anchor-label="deletePurchase" id="1753908303%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-purchase.html"><span>delete</span><wbr></wbr><span><span>Purchase</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1753908303%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="delete-purchase.html"><span class="token function">deletePurchase</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">purchase<span class="token operator">: </span><a href="../../com.diskman.models/-purchase/index.html">Purchase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Removes a purchase and also removes the vinyl records that you bought previously in this purchase.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="457437455%2FFunctions%2F-813795679" anchor-label="deleteSale" id="457437455%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-sale.html"><span>delete</span><wbr></wbr><span><span>Sale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="457437455%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="delete-sale.html"><span class="token function">deleteSale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sale<span class="token operator">: </span><a href="../../com.diskman.models/-sale/index.html">Sale</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Delete a sale. It deletes a sale and also adds the vinyl records of the sale list into the catalog.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1472373903%2FFunctions%2F-813795679" anchor-label="deleteUser" id="1472373903%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-user.html"><span>delete</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1472373903%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="delete-user.html"><span class="token function">deleteUser</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">user<span class="token operator">: </span><a href="../../com.diskman.models/-user/index.html">User</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Delete User from the system.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="872296277%2FFunctions%2F-813795679" anchor-label="deleteVinylRecord" id="872296277%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-vinyl-record.html"><span>delete</span><wbr></wbr><span>Vinyl</span><wbr></wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="872296277%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="delete-vinyl-record.html"><span class="token function">deleteVinylRecord</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">vinyl<span class="token operator">: </span><a href="../../com.diskman.models/-vinyl-record/index.html">VinylRecord</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Delete a Vinyl Record from the catalog. Only if it is valid.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1232147366%2FFunctions%2F-813795679" anchor-label="findPurchase" id="1232147366%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-purchase.html"><span>find</span><wbr></wbr><span><span>Purchase</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1232147366%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-purchase.html"><span class="token function">findPurchase</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idPurchase<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-purchase/index.html">Purchase</a></div><div class="brief "><p class="paragraph">Find a Purchase using the ID</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="5790060%2FFunctions%2F-813795679" anchor-label="findSale" id="5790060%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-sale.html"><span>find</span><wbr></wbr><span><span>Sale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="5790060%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-sale.html"><span class="token function">findSale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idSale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-sale/index.html">Sale</a></div><div class="brief "><p class="paragraph">Find a Sale using the ID</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-979320336%2FFunctions%2F-813795679" anchor-label="findUser" id="-979320336%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-user.html"><span>find</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-979320336%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-user.html"><span class="token function">findUser</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idUser<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-user/index.html">User</a></div><div class="brief "><p class="paragraph">Find a User using the email.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1567652808%2FFunctions%2F-813795679" anchor-label="findVinylRecord" id="1567652808%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-vinyl-record.html"><span>find</span><wbr></wbr><span>Vinyl</span><wbr></wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1567652808%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-vinyl-record.html"><span class="token function">findVinylRecord</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idVinylRecord<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.models/-vinyl-record/index.html">VinylRecord</a></div><div class="brief "><p class="paragraph">Find a Vinyl Disk using the ID</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="730044734%2FFunctions%2F-813795679" anchor-label="isSaleValid" id="730044734%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-sale-valid.html"><span>is</span><wbr></wbr><span>Sale</span><wbr></wbr><span><span>Valid</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="730044734%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-sale-valid.html"><span class="token function">isSaleValid</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sale<span class="token operator">: </span><a href="../../com.diskman.models/-sale/index.html">Sale</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Validation for Sales. It verifies if the vinyl record list of sales doesn't have repeated vinyl records.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1464025049%2FFunctions%2F-813795679" anchor-label="isVinylValid" id="-1464025049%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-vinyl-valid.html"><span>is</span><wbr></wbr><span>Vinyl</span><wbr></wbr><span><span>Valid</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1464025049%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-vinyl-valid.html"><span class="token function">isVinylValid</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">vinylRecord<span class="token operator">: </span><a href="../../com.diskman.models/-vinyl-record/index.html">VinylRecord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Validation for Vinyl Records. It verifies if the vinyl record already exists in the system.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1191928987%2FFunctions%2F-813795679" anchor-label="loadPurchases" id="-1191928987%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-purchases.html"><span>load</span><wbr></wbr><span><span>Purchases</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1191928987%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-purchases.html"><span class="token function">loadPurchases</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">purchase<span class="token operator">: </span><a href="../../com.diskman.models/-purchase/index.html">Purchase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds the purchase into purchases list.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-145373223%2FFunctions%2F-813795679" anchor-label="loadSales" id="-145373223%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-sales.html"><span>load</span><wbr></wbr><span><span>Sales</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-145373223%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-sales.html"><span class="token function">loadSales</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sale<span class="token operator">: </span><a href="../../com.diskman.models/-sale/index.html">Sale</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Add the sale to the Sales List.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2140664843%2FFunctions%2F-813795679" anchor-label="purchaseIdGenerator" id="2140664843%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="purchase-id-generator.html"><span>purchase</span><wbr></wbr><span>Id</span><wbr></wbr><span><span>Generator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2140664843%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="purchase-id-generator.html"><span class="token function">purchaseIdGenerator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Method used to create new ID for Purchases.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1985029822%2FFunctions%2F-813795679" anchor-label="restoreCounters" id="-1985029822%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="restore-counters.html"><span>restore</span><wbr></wbr><span><span>Counters</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1985029822%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="restore-counters.html"><span class="token function">restoreCounters</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idPurchase<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">idSale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Method used to load the data from the repository. It returns the data to the core of the application.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-307290415%2FFunctions%2F-813795679" anchor-label="saleIdGenerator" id="-307290415%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sale-id-generator.html"><span>sale</span><wbr></wbr><span>Id</span><wbr></wbr><span><span>Generator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307290415%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="sale-id-generator.html"><span class="token function">saleIdGenerator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Method used to create new ID for Sales.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-814397661%2FFunctions%2F-813795679" anchor-label="sellVinylRecords" id="-814397661%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sell-vinyl-records.html"><span>sell</span><wbr></wbr><span>Vinyl</span><wbr></wbr><span><span>Records</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-814397661%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="sell-vinyl-records.html"><span class="token function">sellVinylRecords</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sale<span class="token operator">: </span><a href="../../com.diskman.models/-sale/index.html">Sale</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sell Vinyl Records. It adds the sale and also remove the disks from the catalog.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-220712031%2FFunctions%2F-813795679" anchor-label="toDTO" id="-220712031%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.diskman.storage/to-d-t-o.html"><span>to</span><wbr></wbr><span><span>DTO</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-220712031%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">Inventory</a><span class="token punctuation">.</span><a href="../../com.diskman.storage/to-d-t-o.html"><span class="token function">toDTO</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.diskman.storage/-inventory-d-t-o/index.html">InventoryDTO</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="680653139%2FFunctions%2F-813795679" anchor-label="userExists" id="680653139%2FFunctions%2F-813795679" data-filterable-set=":composeApp:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":composeApp:dokkaHtml/commonMain" data-filterable-set=":composeApp:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-exists.html"><span>user</span><wbr></wbr><span><span>Exists</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="680653139%2FFunctions%2F-813795679"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeApp:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="user-exists.html"><span class="token function">userExists</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idUser<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks if a user already exists in the system.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
