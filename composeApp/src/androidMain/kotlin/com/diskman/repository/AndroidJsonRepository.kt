@@ -37,7 +37,7 @@ class AndroidJsonRepository<T>(
         }
     }
 
-    fun saveAll(items: List<T>) = writeToFile(items)
+    override fun saveAll(items: List<T>) = writeToFile(items)
 
     override fun save(item: T) {
         val items = readFromFile()

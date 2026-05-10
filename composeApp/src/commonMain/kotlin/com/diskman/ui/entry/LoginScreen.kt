@@ -22,75 +22,72 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.milliseconds
 
-/**
- * Login screen. It allows you to access to the menu.
- * */
 @Composable
 fun LoginScreen(state: InventoryState) {
-    var email by remember {mutableStateOf("")}
-    var password by remember {mutableStateOf("")}
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
     var errorMessage by remember { mutableStateOf("") }
     val scope = rememberCoroutineScope()
     val emailRegex = "^[a-z0-9+_.-]+@(.+)$".toRegex()
 
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Card ( modifier = Modifier .width(700.dp) .height(750.dp) .padding(20.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFEEEEEE)), elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)) {
-            Column (horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxSize()) {
-                // Logo
+    BoxWithConstraints(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        val isMobile = maxWidth < 600.dp
+        val cardWidth = if (isMobile) maxWidth - 32.dp else 700.dp
+        val logoSize = if (isMobile) 140.dp else 300.dp
+        val titleSize = if (isMobile) 16.sp else 18.sp
+
+        Card(
+            modifier = Modifier
+                .width(cardWidth)
+                .padding(16.dp),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFFEEEEEE)),
+            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp)
+            ) {
                 Image(
                     painter = painterResource(Res.drawable.logo),
                     contentDescription = "Logo Diskman",
-                    modifier = Modifier
-                        .size(300.dp)
-                        .align(Alignment.CenterHorizontally)
-                )
-                // Login Text
-                Text(
-                    text = "Inicia Sesión:", fontWeight = FontWeight.Bold, fontSize = 18.sp
+                    modifier = Modifier.size(logoSize).align(Alignment.CenterHorizontally)
                 )
 
-                Spacer(modifier = Modifier.height(30.dp))
+                Text(text = "Inicia Sesión:", fontWeight = FontWeight.Bold, fontSize = titleSize)
 
-                // Email
+                Spacer(modifier = Modifier.height(24.dp))
+
                 com.diskman.ui.others.emailTextField(email, onValueChange = { email = it }, "Email:")
-
-                // Password
+                Spacer(modifier = Modifier.height(8.dp))
                 com.diskman.ui.others.passwordTextField(password, onValueChange = { password = it }, "Contraseña:")
 
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-                // Button to send
-                Button(onClick = {
-                    try {
-                        if (email.isBlank() || password.isBlank()) throw InvalidFormatException("Rellena los campos correctamente")
-
-                        val user = state.findUser(email)
-                        if (!emailRegex.matches(email)) throw InvalidFormatException("Formato de correo electrónico incorrecto.")
-
-                        if (password == user.password) {
-                            when (user) {
-                                is User.AdminUser -> state.login(user, com.diskman.ui.Screen.ADMIN_MENU)
-                                is User.StandardUser -> state.login(user, com.diskman.ui.Screen.STANDARD_MENU)
+                Button(
+                    onClick = {
+                        try {
+                            if (email.isBlank() || password.isBlank()) throw InvalidFormatException("Rellena los campos correctamente")
+                            val user = state.findUser(email)
+                            if (!emailRegex.matches(email)) throw InvalidFormatException("Formato de correo electrónico incorrecto.")
+                            if (password == user.password) {
+                                when (user) {
+                                    is User.AdminUser -> state.login(user, com.diskman.ui.Screen.ADMIN_MENU)
+                                    is User.StandardUser -> state.login(user, com.diskman.ui.Screen.STANDARD_MENU)
+                                }
+                            } else {
+                                errorMessage = "La contraseña no coincide con este usuario."
                             }
-                        } else {
-                           errorMessage = "La contraseña no coincide con este usuario."
+                        } catch (e: ElementNotFoundException) {
+                            errorMessage = e.localizedMessage
+                            scope.launch { delay(3000.milliseconds); errorMessage = "" }
+                        } catch (e: InvalidFormatException) {
+                            errorMessage = e.localizedMessage
+                            scope.launch { delay(3000.milliseconds); errorMessage = "" }
                         }
-                    } catch (e: ElementNotFoundException) {
-                        errorMessage = e.localizedMessage
-                        scope.launch {
-                            delay(3000.milliseconds)
-                            errorMessage = ""
-                        }
-                    } catch (e: InvalidFormatException) {
-                        errorMessage = e.localizedMessage
-                        scope.launch {
-                            delay(3000.milliseconds)
-                            errorMessage = ""
-                        }
-                    } }, modifier = Modifier.width(550.dp) .height(50.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A237E)), shape = RoundedCornerShape(8.dp)
+                    },
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp).height(50.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A237E)),
+                    shape = RoundedCornerShape(8.dp)
                 ) {
                     Text("Iniciar sesión")
                 }
@@ -98,24 +95,17 @@ fun LoginScreen(state: InventoryState) {
                 Spacer(modifier = Modifier.height(10.dp))
 
                 if (errorMessage.isNotEmpty()) {
-                    Text(
-                        text = errorMessage,
-                        color = Color.Red
-                    )
+                    Text(text = errorMessage, color = Color.Red)
                 }
 
-                Spacer(modifier = Modifier.height(40.dp))
+                Spacer(modifier = Modifier.height(24.dp))
 
                 Text(
                     text = "¿No tienes cuenta? Regístrate",
                     color = Color(0xFF1A237E),
-                    modifier = Modifier.clickable {
-                        state.changePage(com.diskman.ui.Screen.REGISTER)
-                    }
+                    modifier = Modifier.clickable { state.changePage(com.diskman.ui.Screen.REGISTER) }
                 )
             }
         }
     }
-
-
 }

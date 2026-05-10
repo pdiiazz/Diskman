@@ -8,5 +8,10 @@
         "type": "Admin",
         "idUser": "pablito@gmail.com",
         "password": "Password123"
+    },
+    {
+        "type": "Standard",
+        "idUser": "pabliko@gmail.com",
+        "password": "Password123"
     }
 ]

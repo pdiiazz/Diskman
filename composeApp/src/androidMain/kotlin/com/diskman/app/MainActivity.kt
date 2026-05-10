@@ -4,12 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.diskman.app.App
 import com.diskman.repository.AndroidJsonRepository
 import com.diskman.state.InventoryState
 import com.diskman.storage.InventoryDTO
 import com.diskman.storage.PurchaseDTO
 import com.diskman.storage.SaleDTO
+import com.diskman.app.App
 import com.diskman.storage.UserDTO
 import com.diskman.storage.VinylRecordDTO
 
@@ -28,6 +28,13 @@ class MainActivity : ComponentActivity() {
             salesRepository     = AndroidJsonRepository("$dataDir/sales.json", SaleDTO.serializer()) { it.idSale }
         )
         state.load()
+
+        val inventory = state.inventory
+        if (!inventory.userExists("admin@diskman.com")) {
+            val adminUser = inventory.createUser("admin@diskman.com", "Password123", true)
+            inventory.addUser(adminUser)
+            state.save()
+        }
 
         setContent { App(state) }
     }

@@ -3,6 +3,7 @@ package com.diskman.ui.others
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -42,8 +43,9 @@ import diskman.composeapp.generated.resources.Res
 import diskman.composeapp.generated.resources.small
 import org.jetbrains.compose.resources.painterResource
 
-/** DON'T REPEAT YOURSELF, classes and functions. It helps you to don't repeat the same pieces of code.*/
-// For email Inputs
+/** DON'T REPEAT YOURSELF, classes and functions. */
+
+// For email inputs, it adapts to the available width.
 @Composable
 fun emailTextField(
     value: String,
@@ -54,7 +56,7 @@ fun emailTextField(
         value = value,
         onValueChange = onValueChange,
         label = { Text(label) },
-        modifier = Modifier.width(550.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
         colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = Color(0xFF1A237E),
             unfocusedBorderColor = Color.Gray,
@@ -76,12 +78,10 @@ fun passwordTextField(
         value = value,
         onValueChange = onValueChange,
         label = { Text(label) },
-        modifier = Modifier.width(550.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
         singleLine = true,
         visualTransformation = PasswordVisualTransformation(),
-        keyboardOptions = KeyboardOptions(
-            keyboardType = KeyboardType.Password
-        ),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = Color(0xFF1A237E),
             unfocusedBorderColor = Color.Gray,
@@ -91,30 +91,34 @@ fun passwordTextField(
     )
 }
 
-// For textFields
+// For generic textFields, use fillMaxWidth instead of fixed width
 @Composable
-fun textField (
+fun textField(
     value: String,
     onValueChange: (String) -> Unit,
     label: String,
-    width: Int
+    width: Int  // It's ignored on mobile, but respected on desktop if applicable.
 ) {
-    OutlinedTextField(
-        value = value,
-        onValueChange = onValueChange,
-        label = { Text(label) },
-        modifier = Modifier.width(width.dp),
-        colors = OutlinedTextFieldDefaults.colors(
-            focusedBorderColor = Color(0xFF1A237E),
-            unfocusedBorderColor = Color.Gray,
-            focusedLabelColor = Color(0xFF1A237E),
-            unfocusedLabelColor = Color.Gray
-        ),
-        singleLine = true
-    )
+    BoxWithConstraints {
+        val isMobile = maxWidth < 600.dp
+        OutlinedTextField(
+            value = value,
+            onValueChange = onValueChange,
+            label = { Text(label) },
+            modifier = if (isMobile) Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+            else Modifier.width(width.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = Color(0xFF1A237E),
+                unfocusedBorderColor = Color.Gray,
+                focusedLabelColor = Color(0xFF1A237E),
+                unfocusedLabelColor = Color.Gray
+            ),
+            singleLine = true
+        )
+    }
 }
 
-// For Cards
+// Menu cards on mobile occupy the full width, on desktop the original width
 @Composable
 fun MenuCard(
     title: String,
@@ -127,24 +131,14 @@ fun MenuCard(
         modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
     ) {
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Text(
-                text = title,
-                fontSize = 17.sp,
-                fontWeight = FontWeight.Bold
-            )
-
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(text = title, fontSize = 17.sp, fontWeight = FontWeight.Bold)
             Spacer(Modifier.height(8.dp))
-
             Text(text = description)
-
             Spacer(Modifier.height(16.dp))
-
             Button(
                 onClick = onClick,
-                modifier = Modifier.align(Alignment.CenterHorizontally) .fillMaxWidth(),
+                modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A237E)),
                 shape = RoundedCornerShape(8.dp)
             ) {
@@ -154,91 +148,129 @@ fun MenuCard(
     }
 }
 
+// Adapted header: on mobile it stacks vertically, on desktop it's a horizontal row
 @Composable
-fun DiskmanHeader(
-    state: InventoryState,
-    subtitle: String
-) {
+fun DiskmanHeader(state: InventoryState, subtitle: String) {
     val user = state.currentUser.value
 
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(Color(0xFF141A66))
-            .padding(horizontal = 24.dp, vertical = 20.dp),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Image(
-                painter = painterResource(Res.drawable.small),
-                contentDescription = "Logo Diskman",
-                modifier = Modifier.size(100.dp)
-            )
-            Column {
-                Text(text = "Diskman", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
-                Text(text = subtitle, color = Color(0xFFB0BEC5), fontSize = 24.sp)
-            }
-        }
+    BoxWithConstraints {
+        val isMobile = maxWidth < 600.dp
 
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-            Column(horizontalAlignment = Alignment.End) {
-                Text(text = user?.idUser ?: "Anónimo", color = Color.White, fontWeight = FontWeight.Medium, fontSize = 20.sp)
-                Text(
-                    text = when (user) {
-                        is User.AdminUser -> "Administrador"
-                        is User.StandardUser -> "Usuario Estándar"
-                        else -> "?"
-                    },
-                    color = Color(0xFFB0BEC5),
-                    fontSize = 17.sp
-                )
-            }
-            Spacer(modifier = Modifier.width(30.dp))
-
-            when (state.currentUser.value) {
-                is User.AdminUser -> {
-                    Button(
-                        onClick = { state.changePage(com.diskman.ui.Screen.ADMIN_MENU) },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4A6FA5)),
-                        shape = RoundedCornerShape(8.dp),
-                        contentPadding = PaddingValues(horizontal = 26.dp, vertical = 8.dp)
-                    ) {
-                        Text("Volver al Menú", fontSize = 13.sp, color = Color.White)
-                    }
-                }
-
-                is User.StandardUser -> {
-                    Button(
-                        onClick = { state.changePage(com.diskman.ui.Screen.STANDARD_MENU) },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4A6FA5)),
-                        shape = RoundedCornerShape(8.dp),
-                        contentPadding = PaddingValues(horizontal = 26.dp, vertical = 8.dp)
-                    ) {
-                        Text("Volver al Menú", fontSize = 13.sp, color = Color.White)
-                    }
-                }
-
-                else -> {
-                    Button(
-                        onClick = { state.changePage(com.diskman.ui.Screen.LOGIN) },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4A6FA5)),
-                        shape = RoundedCornerShape(8.dp),
-                        contentPadding = PaddingValues(horizontal = 26.dp, vertical = 8.dp)
-                    ) {
-                        Text("Volver al Menú", fontSize = 13.sp, color = Color.White)
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.width(5.dp))
-            Button(
-                onClick = { state.logout() },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF546E7A)),
-                shape = RoundedCornerShape(8.dp),
-                contentPadding = PaddingValues(horizontal = 26.dp, vertical = 8.dp)
+        if (isMobile) {
+            // MÓVIL: vertical layout
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(0xFF141A66))
+                    .padding(horizontal = 16.dp, vertical = 12.dp),
             ) {
-                Text("Cerrar sesión", fontSize = 13.sp, color = Color.White)
+                // Logo + title
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Image(
+                        painter = painterResource(Res.drawable.small),
+                        contentDescription = "Logo Diskman",
+                        modifier = Modifier.size(40.dp)
+                    )
+                    Column {
+                        Text(text = "Diskman", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                        Text(text = subtitle, color = Color(0xFFB0BEC5), fontSize = 12.sp)
+                    }
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+                // User + buttons
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column {
+                        Text(text = user?.idUser ?: "Anónimo", color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+                        Text(
+                            text = when (user) {
+                                is User.AdminUser -> "Administrador"
+                                is User.StandardUser -> "Estándar"
+                                else -> "?"
+                            },
+                            color = Color(0xFFB0BEC5), fontSize = 11.sp
+                        )
+                    }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Button(
+                            onClick = {
+                                when (user) {
+                                    is User.AdminUser -> state.changePage(com.diskman.ui.Screen.ADMIN_MENU)
+                                    is User.StandardUser -> state.changePage(com.diskman.ui.Screen.STANDARD_MENU)
+                                    else -> state.changePage(com.diskman.ui.Screen.LOGIN)
+                                }
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4A6FA5)),
+                            shape = RoundedCornerShape(8.dp),
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+                        ) { Text("Menú", fontSize = 12.sp, color = Color.White) }
+
+                        Button(
+                            onClick = { state.logout() },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF546E7A)),
+                            shape = RoundedCornerShape(8.dp),
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+                        ) { Text("Salir", fontSize = 12.sp, color = Color.White) }
+                    }
+                }
+            }
+        } else {
+            // DESKTOP: horizontal layout
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(0xFF141A66))
+                    .padding(horizontal = 24.dp, vertical = 20.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Image(
+                        painter = painterResource(Res.drawable.small),
+                        contentDescription = "Logo Diskman",
+                        modifier = Modifier.size(100.dp)
+                    )
+                    Column {
+                        Text(text = "Diskman", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+                        Text(text = subtitle, color = Color(0xFFB0BEC5), fontSize = 24.sp)
+                    }
+                }
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                    Column(horizontalAlignment = Alignment.End) {
+                        Text(text = user?.idUser ?: "Anónimo", color = Color.White, fontWeight = FontWeight.Medium, fontSize = 20.sp)
+                        Text(
+                            text = when (user) {
+                                is User.AdminUser -> "Administrador"
+                                is User.StandardUser -> "Usuario Estándar"
+                                else -> "?"
+                            },
+                            color = Color(0xFFB0BEC5), fontSize = 17.sp
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(30.dp))
+                    Button(
+                        onClick = {
+                            when (user) {
+                                is User.AdminUser -> state.changePage(com.diskman.ui.Screen.ADMIN_MENU)
+                                is User.StandardUser -> state.changePage(com.diskman.ui.Screen.STANDARD_MENU)
+                                else -> state.changePage(com.diskman.ui.Screen.LOGIN)
+                            }
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4A6FA5)),
+                        shape = RoundedCornerShape(8.dp),
+                        contentPadding = PaddingValues(horizontal = 26.dp, vertical = 8.dp)
+                    ) { Text("Volver al Menú", fontSize = 13.sp, color = Color.White) }
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Button(
+                        onClick = { state.logout() },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF546E7A)),
+                        shape = RoundedCornerShape(8.dp),
+                        contentPadding = PaddingValues(horizontal = 26.dp, vertical = 8.dp)
+                    ) { Text("Cerrar sesión", fontSize = 13.sp, color = Color.White) }
+                }
             }
         }
     }
@@ -246,7 +278,6 @@ fun DiskmanHeader(
 
 fun tryCreateUser(state: InventoryState, email: String, password: String, password2: String, emailRegex: Regex, passwordRegex: Regex) {
     if (state.userExists(email)) throw DuplicateIdException("Este correo ya tiene una cuenta registrada.")
-
     if (email.isBlank() || password.isBlank() || password2.isBlank()) throw InvalidFormatException("Rellena los campos correctamente")
     if (!emailRegex.matches(email)) throw InvalidFormatException("Formato de correo electrónico incorrecto. (example@diskman.com)")
     if (!passwordRegex.matches(password)) throw InvalidFormatException("Formato de contraseña incorrecto. (Mínimo 1 mayúscula, 8 carácteres y un número)")
