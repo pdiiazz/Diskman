@@ -1,0 +1,12 @@
+[
+    {
+        "type": "Admin",
+        "idUser": "admin@diskman.com",
+        "password": "Password123"
+    },
+    {
+        "type": "Admin",
+        "idUser": "pablito@gmail.com",
+        "password": "Password123"
+    }
+]
