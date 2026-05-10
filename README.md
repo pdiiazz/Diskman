@@ -1,40 +1,64 @@
-This is a Kotlin Multiplatform project targeting Android, Desktop (JVM).
+# DiskMan — Vinyl Record Collection Manager
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+## What is Diskman?
 
-### Build and Run Android Application
+Diskman is a collection management program focused on vinyl records, designed to help collectors keep track of their stock in a simple and centralized way. It handles incoming and outgoing records, purchases, sales, and users.
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+## Technologies Used
 
-### Build and Run Desktop (JVM) Application
-
-To build and run the development version of the desktop app, use the run configuration from the run widget
-in your IDE’s toolbar or run it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
-  ```
+- **Kotlin** — Primary programming language
+- **Kotlin Multiplatform (KMP)** — Project structure targeting Android and Desktop (JVM)
+- **Compose Multiplatform** — Declarative UI framework shared across platforms
+- **Gradle (KTS)** — Build system with Version Catalogs
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Project Structure
+
+```
+Diskman/
+├── composeApp/
+│   └── src/
+│       ├── commonMain/         # Shared code across all targets
+│       │   └── kotlin/
+│       ├── androidMain/        # Android-specific code
+│       │   └── kotlin/
+│       └── jvmMain/            # Desktop (JVM)-specific code
+│           └── kotlin/
+├── gradle/
+├── build.gradle.kts
+├── settings.gradle.kts
+└── gradle.properties
+```
+
+### Module Descriptions
+
+- **`commonMain`** — Contains all business logic and shared UI built with Compose Multiplatform. This is the core of the project: models, repositories, central logic, and screens reusable across all platforms.
+- **`androidMain`** — Contains the Android-specific entry point.
+- **`jvmMain`** — Contains the Desktop (JVM)-specific entry point.
+
+---
+
+## Architecture
+
+The project follows the **MVVM** architecture with Compose Multiplatform as the presentation layer:
+
+```
+UI (Compose) → ViewModel → Repository → Persistence
+```
+
+Each layer has a clear responsibility:
+
+- The **UI** is built with Compose and shared across platforms via `commonMain`.
+- The **ViewModel** coordinates business logic and persistence.
+- The **Repository** manages data access.
+- **DTOs** and **Mappers** act as a translation layer between the domain model and the persistence format.
+
+---
+
+## Supported Platforms
+
+| Platform | Description |
+|---|---|
+| **Android** | Native Android application |
+| **Desktop (JVM)** | Desktop application for macOS, Linux and Windows |
