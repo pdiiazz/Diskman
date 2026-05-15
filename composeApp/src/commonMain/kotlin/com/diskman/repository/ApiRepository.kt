@@ -11,21 +11,36 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 
+/**
+ * Generic REST repository implementation using Ktor Client.
+ *
+ * @param T Entity type.
+ * @param endpoint API endpoint path.
+ * @param serializer Serializer for JSON conversion.
+ * @param getId Function to extract entity ID.
+ */
 class ApiRepository<T>(
     private val endpoint: String,
     private val serializer: KSerializer<T>,
     private val getId: (T) -> String
 ) : Repository<T> {
-
+    /** Base API URL. It's a Local API  */
     private val baseUrl = "http://localhost:3000"
+    /** JSON configuration. */
     private val json = Json { ignoreUnknownKeys = true }
 
+    /** HTTP client instance. */
     private val client = HttpClient {
         install(ContentNegotiation) {
             json(json)
         }
     }
 
+    /**
+     * Retrieves all entities from the API.
+     *
+     * @return List of entities or empty list on failure.
+     */
     override fun findAll(): List<T> {
         return runCatching {
             runBlocking {
@@ -36,6 +51,11 @@ class ApiRepository<T>(
         }.getOrDefault(emptyList())
     }
 
+    /**
+     * Saves a single entity.
+     *
+     * @param item Entity to save.
+     */
     override fun save(item: T) {
         runCatching {
             runBlocking {
@@ -48,10 +68,20 @@ class ApiRepository<T>(
         }
     }
 
+    /**
+     * Saves multiple entities.
+     *
+     * @param items Entities to save.
+     */
     override fun saveAll(items: List<T>) {
         items.forEach { save(it) }
     }
 
+    /**
+     * Deletes an entity by ID.
+     *
+     * @param id Entity identifier.
+     */
     override fun delete(id: String) {
         runCatching {
             runBlocking {

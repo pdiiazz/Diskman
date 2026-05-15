@@ -28,7 +28,7 @@ fun main() {
     /** REPOSITORY CONNECTION THROUGH STATE */
     state.load()
 
-    // Només crea l'admin si no existeix a la BD
+    // Only if admin doesn't exist in the DataBase (It's a sample for user)
     if (!state.userExists("admin@diskman.com")) {
         val adminUser = state.createUser("admin@diskman.com", "Password123", true)
         state.addUser(adminUser)

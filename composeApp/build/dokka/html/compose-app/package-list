@@ -104,6 +104,12 @@ $dokka.location:com.diskman.repository/AndroidJsonRepository/delete/#kotlin.Stri
 $dokka.location:com.diskman.repository/AndroidJsonRepository/findAll/#/PointingToDeclaration/compose-app/com.diskman.repository/-android-json-repository/find-all.html
 $dokka.location:com.diskman.repository/AndroidJsonRepository/save/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/compose-app/com.diskman.repository/-android-json-repository/save.html
 $dokka.location:com.diskman.repository/AndroidJsonRepository/saveAll/#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/compose-app/com.diskman.repository/-android-json-repository/save-all.html
+$dokka.location:com.diskman.repository/ApiRepository///PointingToDeclaration/compose-app/com.diskman.repository/-api-repository/index.html
+$dokka.location:com.diskman.repository/ApiRepository/ApiRepository/#kotlin.String#kotlinx.serialization.KSerializer[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.String]/PointingToDeclaration/compose-app/com.diskman.repository/-api-repository/-api-repository.html
+$dokka.location:com.diskman.repository/ApiRepository/delete/#kotlin.String/PointingToDeclaration/compose-app/com.diskman.repository/-api-repository/delete.html
+$dokka.location:com.diskman.repository/ApiRepository/findAll/#/PointingToDeclaration/compose-app/com.diskman.repository/-api-repository/find-all.html
+$dokka.location:com.diskman.repository/ApiRepository/save/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/compose-app/com.diskman.repository/-api-repository/save.html
+$dokka.location:com.diskman.repository/ApiRepository/saveAll/#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/compose-app/com.diskman.repository/-api-repository/save-all.html
 $dokka.location:com.diskman.repository/JsonRepository///PointingToDeclaration/compose-app/com.diskman.repository/-json-repository/index.html
 $dokka.location:com.diskman.repository/JsonRepository/JsonRepository/#kotlin.String#kotlinx.serialization.KSerializer[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.String]/PointingToDeclaration/compose-app/com.diskman.repository/-json-repository/-json-repository.html
 $dokka.location:com.diskman.repository/JsonRepository/delete/#kotlin.String/PointingToDeclaration/compose-app/com.diskman.repository/-json-repository/delete.html
