@@ -2,7 +2,7 @@
 
 ## What is Diskman?
 
-Diskman is a collection management program focused on vinyl records, designed to help collectors keep track of their stock in a simple and centralized way. It handles incoming and outgoing records, purchases, sales, and users.
+Diskman Kotlin Project is a collection management program focused on vinyl records, designed to help collectors keep track of their stock in a simple and centralized way. It handles incoming and outgoing records, purchases, sales, and users.
 
 ## Technologies Used
 
