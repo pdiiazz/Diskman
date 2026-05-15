@@ -28,6 +28,8 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+            // DEPENDENCIES PER CLIENT HTTP
+            implementation("io.ktor:ktor-client-android:3.1.3")
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -40,6 +42,10 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
             implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
+            // DEPENDENCIES PER CLIENT HTTP
+            implementation("io.ktor:ktor-client-core:3.1.3")
+            implementation("io.ktor:ktor-client-content-negotiation:3.1.3")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.3")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -47,6 +53,8 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            // DEPENDENCIES PER CLIENT HTTP
+            implementation("io.ktor:ktor-client-cio:3.1.3")
         }
     }
 }

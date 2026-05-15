@@ -158,11 +158,15 @@ class InventoryState(
         if (counters != null) inventory.restoreCounters(counters.idPurchase, counters.idSale)
 
         userRepository.findAll().forEach { user ->
-            inventory.addUser(user.toModel())
+            if (!inventory.userExists(user.idUser)) {
+                inventory.addUser(user.toModel())
+            }
         }
 
         vinylRepository.findAll().forEach { vinyl ->
-            inventory.addVinylRecord(vinyl.toModel())
+            if (!inventory.catalog.any { it.idVinyl == vinyl.idVinyl }) {
+                inventory.addVinylRecord(vinyl.toModel())
+            }
         }
 
         salesRepository.findAll().forEach { sale ->

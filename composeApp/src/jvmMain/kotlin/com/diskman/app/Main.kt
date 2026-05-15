@@ -2,6 +2,7 @@ package com.diskman.app
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import com.diskman.repository.ApiRepository
 import com.diskman.repository.JsonRepository
 import com.diskman.state.InventoryState
 import com.diskman.storage.InventoryDTO
@@ -17,23 +18,25 @@ import com.diskman.storage.VinylRecordDTO
 fun main() {
     /** STATE CONNECTION */
     val state = InventoryState(
-        inventoryRepository = JsonRepository("data/inventory.json", InventoryDTO.serializer()) { "inventory" },
-        userRepository = JsonRepository("data/users.json", UserDTO.serializer()) { it.idUser },
-        vinylRepository = JsonRepository("data/vinyl.json", VinylRecordDTO.serializer()) { it.idVinyl },
-        purchaseRepository = JsonRepository("data/purchases.json", PurchaseDTO.serializer()) { it.idPurchase },
-        salesRepository = JsonRepository("data/sales.json", SaleDTO.serializer()) { it.idSale }
+        inventoryRepository = ApiRepository("inventory", InventoryDTO.serializer()) { "inventory" },
+        userRepository = ApiRepository("users", UserDTO.serializer()) { it.idUser },
+        vinylRepository = ApiRepository("vinyls", VinylRecordDTO.serializer()) { it.idVinyl },
+        purchaseRepository = ApiRepository("purchases", PurchaseDTO.serializer()) { it.idPurchase },
+        salesRepository = ApiRepository("sales", SaleDTO.serializer()) { it.idSale }
     )
 
     /** REPOSITORY CONNECTION THROUGH STATE */
     state.load()
 
+    // Només crea l'admin si no existeix a la BD
+    if (!state.userExists("admin@diskman.com")) {
+        val adminUser = state.createUser("admin@diskman.com", "Password123", true)
+        state.addUser(adminUser)
+        state.save()
+    }
+
     /** MODEL CONNECTION THROUGH STATE */
     val inventory = state.inventory
-
-    if (!inventory.userExists("admin@diskman.com")) {
-        val adminUser = inventory.createUser("admin@diskman.com", "Password123", true)
-        inventory.addUser(adminUser)
-    }
 
     application {
         Window(onCloseRequest = {state.save(); exitApplication()}, title = "Diskman") {
